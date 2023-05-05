@@ -1,0 +1,39 @@
+<div class="container mt-3">
+<h1>Edit Book Data</h1>
+<form [formGroup]="addbook" novalidate class="form" >
+    <div class="form-group">
+      <label for="exampleInputtitle">Book Title</label>
+      <input type="text" class="form-control" id="exampleInputtitle"  placeholder="Enter Book Title"
+      formControlName="Book_Title" pattern="[a-zA-Z]*">
+    </div>
+    <span class=" isbnmsg text-danger">
+      <div *ngIf="f.Book_Title.errors.minlength">Book Title must be at least 6 characters</div>
+      <div *ngIf="f.Book_Title.errors.pattern">Book Title must be in characters</div>
+      <div *ngIf="(f.Book_Title.touched || submitted) && f.Book_Title.errors?.required">
+        Book Title is required</div>
+    </span>
+
+    <div class="form-group mt-4">
+      <label for="exampleInputauthor">Author Name</label>
+      <input type="text" class="form-control" id="exampleInputauthor" placeholder="Enter Author Name"
+      formControlName="Author" pattern="[a-zA-Z]*">
+    </div>
+
+    <span class=" isbnmsg text-danger">
+      <div *ngIf="f.Author.errors.maxlength">Author must be below 12 characters</div>
+      <div *ngIf="f.Author.errors.pattern">Author must be in characters</div>
+      <div *ngIf="(f.Author.touched || submitted) && f.Author.errors?.required">
+        Book Author is required</div>
+    </span>
+
+    <div class="form-group mt-4">
+        <label for="exampleInputisbn">ISBN Number</label>
+        <input type="text" class="form-control" id="exampleInputisbn"
+        formControlName="ISBN" readonly>
+        <span class="isbnmsg">You cannot change ISBN Number</span>
+      </div>
+
+
+    <button type="submit" class="btn btn-warning m-3" (click)="onsubmit()">Update Book</button>
+  </form>
+  </div>

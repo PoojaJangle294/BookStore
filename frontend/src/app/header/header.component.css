@@ -1,0 +1,15 @@
+.app-name .app-initial{
+    color: blue;
+}
+header .app-name{
+    color: white;
+    padding-left: 0.3rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+.nav-link:hover{
+    color: blue;
+    transition: 5s;
+}
+

@@ -1,0 +1,23 @@
+<h1>All Books Data</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Book Id</th>
+        <th scope="col">Book Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">ISBN No.</th>
+        <th scope="col" colspan="2">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of bookdata">
+        <td>{{book._id}}</td>
+        <td>{{book.Book_Title}}</td>
+        <td>{{book.Author}}</td>
+        <td>{{book.ISBN}}</td>
+        <td><button class="btn btn-success"> <a href="editbook/{{book._id}}" class="text-dark">Update</a>
+          </button></td>
+        <td><button class="btn btn-danger text-dark" (click)="deletebook(book)"><u>Delete</u></button></td>
+      </tr>
+    </tbody> 
+  </table>

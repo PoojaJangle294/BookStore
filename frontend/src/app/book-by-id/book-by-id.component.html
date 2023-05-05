@@ -1,0 +1,16 @@
+<h1> Search Book By ID
+</h1>
+
+<form align="center">
+
+    <form class="mt-5">
+      <input type="text" placeholder="Book Id" #bookId required>&nbsp;
+      <button class="btn btn-success"  type="submit" (click)="searchBook(bookId.value)">Search Book</button>
+    </form>
+    <div *ngIf="book" class="container mt-4">
+      <h2>{{ book.Book_Title }}</h2>
+      <p>Author: {{ book.Author }}</p>
+      <p>ISBN: {{ book.ISBN }}</p>
+    </div>
+
+</form>

@@ -1,0 +1,16 @@
+h1{
+    color: blue;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.container {
+    font-family: arial;
+    font-size: 24px;
+    width: 350px;
+    height: 500px;
+    margin-left: 500px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
